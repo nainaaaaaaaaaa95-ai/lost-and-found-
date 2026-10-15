@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost & Found Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Lost & Found Connect</div>
+      <nav class="tabs" aria-label="Main navigation">
+        <button class="tab-btn active" data-target="home">Home</button>
+        <button class="tab-btn" data-target="services">Services</button>
+        <button class="tab-btn" data-target="view">View</button>
+        <button class="tab-btn" data-target="contact">Contact</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="tab-panel active">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">Helping families reconnect faster</p>
+            <h1>Find a lost person with care, clarity, and quick support.</h1>
+            <p class="lead">
+              Share the details of a missing person, contact the right people, and
+              keep the search moving in one simple place.
+            </p>
+            <button type="button" class="primary-btn" id="reportCaseBtn">Report a case</button>
+          </div>
+          <div class="hero-card">
+            <h3>Why this works</h3>
+            <ul>
+              <li>Easy-to-fill details form</li>
+              <li>Fast contact sharing</li>
+              <li>Trusted support guidance</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="carousel">
+          <button class="carousel-btn" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+          <div class="carousel-track">
+            <img
+              class="carousel-image active"
+              src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80"
+              alt="Community support"
+            />
+            <img
+              class="carousel-image"
+              src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80"
+              alt="Family reunion"
+            />
+            <img
+              class="carousel-image"
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+              alt="Helping hand"
+            />
+          </div>
+          <button class="carousel-btn" id="nextBtn" aria-label="Next slide">&#10095;</button>
+        </div>
+      </section>
+
+      <section id="services" class="tab-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>Submit a lost person report</h2>
+        </div>
+
+        <div class="service-grid">
+          <form id="reportForm" class="report-form">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="Enter name" required />
+            </label>
+            <label>
+              Age
+              <input type="number" name="age" min="1" placeholder="Enter age" />
+            </label>
+            <label>
+              Last known location
+              <input type="text" name="location" placeholder="City or area" required />
+            </label>
+            <label>
+              Phone number
+              <input type="tel" name="phone" placeholder="Phone number" required />
+            </label>
+            <label>
+              Short description
+              <textarea name="description" rows="4" placeholder="Describe the person" required></textarea>
+            </label>
+            <button type="submit" class="primary-btn">Submit report</button>
+            <p id="formMessage" class="form-message" aria-live="polite"></p>
+          </form>
+
+          <div class="service-card">
+            <h3>What happens next?</h3>
+            <p>
+              Once you send the details, our team will review the information and
+              contact you on the phone number provided to help with the next step.
+            </p>
+            <ul>
+              <li>Record the person’s details</li>
+              <li>Share contact information</li>
+              <li>Support follow-up enquiries</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="view" class="tab-panel">
+        <div class="section-heading">
+          <p class="eyebrow">View</p>
+          <h2>Saved lost person reports</h2>
+        </div>
+
+        <div id="viewReports" class="view-list"></div>
+      </section>
+
+      <section id="contact" class="tab-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Reach out for help</h2>
+        </div>
+
+        <div class="contact-card">
+          <p><strong>Phone:</strong> +1 234 567 890</p>
+          <p><strong>Email:</strong> support@lostandfoundconnect.com</p>
+          <p><strong>Address:</strong> 12 Community Street, Downtown</p>
+          <p>
+            If you have urgent information, please call the phone number above
+            directly.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
